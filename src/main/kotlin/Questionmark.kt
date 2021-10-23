@@ -1,8 +1,8 @@
-class Questionmark(dataSourse: DataSourse):DataSourseDecorator(dataSourse) {
+class Questionmark(dataSourse: DataSource) : DataSourceDecorator(dataSourse) {
 
-    override fun printData(data: String) {
+    override fun printData() {
         print("!")
-        super.printData(data)
+        super.printData()
         print("!")
     }
 }

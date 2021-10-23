@@ -1,15 +1,16 @@
 fun main() {
-    val ds = PrintOnConsole()
-    val ds2 = SquareBrackets(PrintOnConsole())
-    val ds3 = Questionmark(PrintOnConsole())
-    val ds4 = SquareBrackets(Questionmark(PrintOnConsole()))
-    val ds5 = Questionmark(SquareBrackets(PrintOnConsole()))
+    val ds = PrintOnConsole("Hello")
+    val ds2 = SquareBrackets(PrintOnConsole("Hello2"))
+    val ds3 = Questionmark(PrintOnConsole("Hello3"))
+    val ds4 = SquareBrackets(Questionmark(PrintOnConsole("Hello4")))
+    val ds5 = Questionmark(SquareBrackets(PrintOnConsole("Hello5")))
 
-    val listDataSourse = listOf<DataSourse>(ds,ds2,ds3,ds4,ds5)
-        listDataSourse.forEach{
-            it.printData("Hellow")
-            println("")
-        }
+    val listDataSource = listOf(ds, ds2, ds3, ds4, ds5)
+    listDataSource.forEachIndexed { index, data ->
+        print("${index+1}- ")
+        data.printData()
+        println("")
 
 
+    }
 }

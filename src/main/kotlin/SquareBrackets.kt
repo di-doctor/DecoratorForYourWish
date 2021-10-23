@@ -1,7 +1,7 @@
-class SquareBrackets(dataSourse: DataSourse):DataSourseDecorator(dataSourse) {
-    override fun printData(data: String){
+class SquareBrackets(dataSourse: DataSource) : DataSourceDecorator(dataSourse) {
+    override fun printData() {
         print("[")
-        super.printData(data)
+        super.printData()
         print("]")
 
     }
